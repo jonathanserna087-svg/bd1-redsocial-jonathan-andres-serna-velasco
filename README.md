@@ -3,7 +3,7 @@
 ## Nombre del proyecto
 Red Social Estudiantil: diseño de la base de datos (Bases de Datos I).
 
-## Integrantes
+## Integrante
 - Jonathan Andrés Serna Velasco
 
 ## Descripción del caso
