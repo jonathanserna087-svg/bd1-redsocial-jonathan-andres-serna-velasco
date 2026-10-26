@@ -17,8 +17,6 @@ Este repositorio contiene el diseño y la implementación de la base de datos qu
 
 ## Contenido del repositorio
 
-- `Tarea1/`: entrega de la Tarea 1 (modelo conceptual).
-- `Tarea2/`: entrega de la Tarea 2 (modelo lógico, diccionario de datos y diagrama del modelo lógico).
 - `Tarea3/`: entrega de la Tarea 3 (modelo físico en PostgreSQL):
   - `ddl_red_social.sql`: script DDL con las 24 tablas, llaves, restricciones e índices.
   - `pruebas_red_social.sql`: datos de ejemplo y pruebas de las restricciones.
