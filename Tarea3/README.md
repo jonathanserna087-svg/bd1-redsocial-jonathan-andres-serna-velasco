@@ -23,7 +23,6 @@ Este repositorio contiene el diseño y la implementación de la base de datos qu
   - `ddl_red_social.sql`: script DDL con las 24 tablas, llaves, restricciones e índices.
   - `pruebas_red_social.sql`: datos de ejemplo y pruebas de las restricciones.
   - `informe/`: informe técnico en PDF y diagrama del modelo físico.
-  - `video/`: enlace al video de sustentación en YouTube.
   - `README.md`: instrucciones para ejecutar el script.
 
 ## Tarea 3 · Modelo físico
