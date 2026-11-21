@@ -1,0 +1,19 @@
+digraph Hibrido {
+ graph [rankdir=TB, bgcolor="white", pad="0.35", nodesep="0.35", ranksep="0.52", fontname="DejaVu Sans", fontsize=16, label="RED SOCIAL ESTUDIANTIL PASCUALINA | ARQUITECTURA HIBRIDA", labelloc=t, fontcolor="#16324F"];
+ node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11, color="#98B7C9", fillcolor="#EEF6FA", fontcolor="#16324F", margin="0.22,0.12"];
+ edge [color="#54889B", arrowsize=.7, penwidth=1.2];
+ clientes[label="Usuarios web y app\nPublicaciones · Eventos · Grupos", fillcolor="#DDF5F6"];
+ sensores[label="Dispositivos del campus\nOcupacion · Temperatura (IoT)", fillcolor="#DDF5F6"];
+ {rank=same; clientes;sensores;}
+ api[label="Capa de aplicacion / API\nAutenticacion · validacion · control de acceso"];
+ gateway[label="Gateway IoT\nMQTT/HTTPS · sello de tiempo · validacion"];
+ {rank=same; api;gateway;}
+ rel[label="PostgreSQL | 24 tablas relacionales base\nUSUARIO · PUBLICACION · EVENTO · GRUPO\nADJUNTO · REACCION y relaciones N:M",fillcolor="#DCEFF8"];
+ json[label="PostgreSQL | campos JSONB\nPUBLICACION.datos_nosql\nEVENTO.detalles_jsonb\nPERFIL_CONFIGURACION.preferencias",fillcolor="#FFF4D8"];
+ serie[label="PostgreSQL | registros particionados\nLECTURA_IOT · REGISTRO_ACTIVIDAD\nRangos mensuales + indices B-tree / GIN",fillcolor="#F3EAF8"];
+ {rank=same; rel;json;serie;}
+ analytics[label="Consultas SQL y analitica\nJOIN · GROUP BY · COUNT / AVG / SUM\nGIN JSONB · partition pruning · EXPLAIN",fillcolor="#D8F4E5"];
+ privacy[label="Gobierno de datos\nMinimizacion · retencion · respaldos · acceso por roles",fillcolor="#F2F5F8"];
+ clientes->api; sensores->gateway;
+ api->rel; api->json; gateway->serie; rel->analytics;json->analytics;serie->analytics; analytics->privacy;
+}
