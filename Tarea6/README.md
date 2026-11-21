@@ -81,9 +81,6 @@ Los scripts ubicados en `Modelo_Arquitectura/sql/` deben ejecutarse en el siguie
 6. 06_validaciones.sql
 7. 07_explain.sql
 
-**Advertencia:** Ejecutar estos scripts únicamente en una base de datos nueva de pruebas. El script original puede eliminar el esquema red_social y sus datos existentes.
-
-Los registros utilizados en las demostraciones son simulados.
 
 ## 8. Conclusiones
 
